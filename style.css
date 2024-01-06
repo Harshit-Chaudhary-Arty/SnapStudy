@@ -76,7 +76,7 @@ html , body{
     height: 10vh;
     background-color:#C3F142;
     color: rgb(0, 0, 0);
-    border-radius:15px;
+    border-radius:25px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -106,6 +106,10 @@ a{
     flex-direction: column;
     height: 70vh;
     margin-top: 15%; 
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 5vh;
 }
 
 #footer{
@@ -114,14 +118,19 @@ a{
     font-family: Face;
     position: absolute;
     bottom: 0%;
-    
 }
 
 #footer h2{
+    font-size: 4vh;
     white-space: nowrap;
     font-weight: 200;
     animation-name: infinitescroll;
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-} 
+}
+
+#nav a{
+    color: white;
+}
+
