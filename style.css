@@ -33,7 +33,7 @@ html , body{
 #nav i{
     /* position: absolute;
     right: 2%; */
-    font-size: 1.8vh;
+    font-size: 2.5vh;
 }
 
 #Logo{
@@ -52,15 +52,30 @@ html , body{
 .page{
     height: 100vh;
     width: 100vw;
-    background-color: #0a0b0b;
+    background-color: #000000;
     overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes infinitescroll{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+#page1{
+    background: rgb(24,0,36);
+    background: linear-gradient(0deg, rgba(24,0,36,1) 0%, rgba(0,0,0,1) 69%, rgba(101,101,101,1) 100%);
 }
 
 .tabs{
     width: 70vw;
     height: 10vh;
-    background-color:#222222;
-    color: white;
+    background-color:#C3F142;
+    color: rgb(0, 0, 0);
     border-radius:15px;
     display: flex;
     align-items: center;
@@ -76,11 +91,12 @@ html , body{
 
 
 a{
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-family: future;
+    font-family: 'Raleway', sans-serif;
     /* font-stretch: 150%; */
     font-size: 2.4vh;
+    font-weight: 500;
 }
 
 .wrapper{
@@ -88,5 +104,24 @@ a{
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 80vh; 
+    height: 70vh;
+    margin-top: 15%; 
 }
+
+#footer{
+    background-color: #C3F142;
+    color: black;
+    font-family: Face;
+    position: absolute;
+    bottom: 0%;
+    
+}
+
+#footer h2{
+    white-space: nowrap;
+    font-weight: 200;
+    animation-name: infinitescroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} 
